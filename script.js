@@ -394,14 +394,18 @@ function generateReplies() {
                   block: "end"
                });
                 break;
+                
             }        
         },1000);
+        resolve("done")
     })
 }
 
 
 async function renderReply() {
     const replyMsg = await generateReplies();
+    loading();
+    
 }
 
 function renderTask() {
@@ -433,6 +437,35 @@ function renderTask() {
     }
 
 
+
+}
+
+function loading() {
+
+    const replyDiv = document.createElement('div');
+    const replyMsgDiv = document.createElement('div');
+    const replyMsgPar = document.createElement('p');
+
+        replyDiv.className = "reply"
+
+        replyMsgDiv.className = "replyMessage";
+        replyMsgDiv.classList.add("active");
+        replyMsgPar.textContent = "Typing....";
+        setTimeout(()=>{
+            replyDiv.remove();
+        }, 1000)
+        replyMsgPar.style.overflowWrap = "break-word";
+
+        
+
+        replyDiv.appendChild(replyMsgDiv)
+        replyMsgDiv.appendChild(replyMsgPar);
+        messagesDiv.appendChild(replyDiv);
+
+        replyMsgDiv.scrollIntoView({
+            behavior: "smooth",
+            block: "end"
+        });
 
 }
 
@@ -472,7 +505,3 @@ document.addEventListener('keydown', (e) => {
 
 
 
-messagesDiv.scrollIntoView({
-    behavior: "smooth",
-    block: "end"
-});
