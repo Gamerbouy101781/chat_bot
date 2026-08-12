@@ -143,3 +143,22 @@ body {
     margin: 0 0 0 1rem;
     cursor: pointer;
 }
+
+@media (max-width: 400px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    .main .chat-card {
+  /*       position: fixed;
+        bottom: 1; */
+        width: 100%;
+        border-radius: 0;
+    }
+    .main .chat-card .messages {
+        min-height: 70vh;
+    }
+}
