@@ -388,6 +388,11 @@ function generateReplies() {
                 replyDiv.appendChild(replyMsgDiv)
                 replyMsgDiv.appendChild(replyMsgPar);
                 messagesDiv.appendChild(replyDiv);
+
+               replyMsgDiv.scrollIntoView({
+                 behavior: "smooth",
+                  block: "end"
+               });
                 break;
             }        
         },1000);
@@ -420,11 +425,17 @@ function renderTask() {
         sentDiv.appendChild(sentMsgDiv)
         sentMsgDiv.appendChild(sentMsgPar);
         messagesDiv.appendChild(sentDiv);
+
+        sentMsgDiv.scrollIntoView({
+            behavior: "smooth",
+            block: "end"
+        });
     }
 
-    
-    
+
+
 }
+
 
 inputValue.addEventListener('input', function(e){
     const value = e.target.value;
@@ -457,4 +468,11 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         submitBtn.click();
     }
+});
+
+
+
+messagesDiv.scrollIntoView({
+    behavior: "smooth",
+    block: "end"
 });
