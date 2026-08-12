@@ -145,6 +145,9 @@ body {
 }
 
 @media (max-width: 400px) {
+    body {
+        background-color: #1f1e1e;
+    }
     .main {
         display: flex;
         flex-direction: column;
@@ -157,6 +160,7 @@ body {
         bottom: 1; */
         width: 100%;
         border-radius: 0;
+        background-color: #1f1e1e;
         padding: 0;
         max-height: 100vh;
         border: none;
