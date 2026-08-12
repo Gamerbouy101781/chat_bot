@@ -157,11 +157,14 @@ body {
         bottom: 1; */
         width: 100%;
         border-radius: 0;
-        padding: .5rem;
+        padding: 0;
         max-height: 100vh;
         border: none;
     }
     .main .chat-card .messages {
+        position: fixed;
+        top: 0;
+        width: 100%;
         max-height: 100vh;
     }
     .input {
@@ -169,8 +172,12 @@ body {
         bottom: 0;
         width: 100%;
     }
+    .input input {
+        border-radius: 0;
+        width: 85%;
+    }
     .input button {
-    border-radius: .8rem;
+    border-radius: 0;
     padding: .8rem .4rem;
     width: fit-content;
     margin: 0 0 0 .5rem;
