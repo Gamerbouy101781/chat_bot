@@ -37,7 +37,8 @@ body {
     text-overflow: clip;
     overflow: scroll;
     width: 100%;
-    max-height: 300px;
+    height: 50vh;
+    max-height: 70vh;
     background: #1f1e1e;
     flex-direction: column;
     border: 1px solid #000; 
