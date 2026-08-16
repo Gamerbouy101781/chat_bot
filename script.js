@@ -84,7 +84,7 @@ function getUniData() {
             console.log(unis);
 
             for (let i = 0; i < data.length; i++) {
-                if (unis[i]["name"] === storeSentMessage[0]) {
+                if (unis[i]["name"] === storeSentMessage[0].trim()) {
                     const results = {
                         name: unis[i]["name"],
                         province: unis[i]["state-province"],
