@@ -24,7 +24,8 @@ body {
     width: 85%;
     min-width: 200px;
     max-width: 600px;
-    min-height: 100vh;
+
+    max-height: 85vh;
     padding: 1rem;
     background-color: #090909;
     border: 1px solid #fff;

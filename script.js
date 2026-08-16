@@ -13,6 +13,7 @@ let storeSentMessage = []
 let replies = [
   "Awezz bro, how may I help you today?",
   "Hi there!",
+  "Mfanaka",
   "Hi, how are you?",
   "Hey! 👋",
   "Hello! How can I help?",
